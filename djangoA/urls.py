@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
-from . import views
+from djangoA import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^index/$', views.index, name='index'),  # 匹配/index/
     re_path(r'^$', views.index, name='index'),  # 匹配空路径
-    path("user/", include(("user.urls", "user")))
+    path("book/", include(("book.urls"))),
 ]

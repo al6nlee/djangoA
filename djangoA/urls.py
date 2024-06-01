@@ -23,4 +23,6 @@ urlpatterns = [
     re_path(r'^index/$', views.index, name='index'),  # 匹配/index/
     re_path(r'^$', views.index, name='index'),  # 匹配空路径
     path("book/", include(("book.urls"))),
+    path("music/", include(("music.urls"))),
+    path("video/", include(("video.urls"))),
 ]
